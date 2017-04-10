@@ -33,10 +33,10 @@
     <div class="row">
         <div class="col l12">
             <h1 class="blue-text text-accent-4 hide-on-small-only">
-                Bem vindo à minha página pessoal!
+                Bem vindo!
             </h1>
             <h3 class="blue-text text-accent-4 hide-on-med-and-up">
-                Bem vindo à minha página pessoal!
+                Bem vindo!
             </h3>
         </div>
 
@@ -75,7 +75,7 @@
     </div>
     <div class="row">
         <div class="col l10 offset-l2 s12">
-            <h3 class="blue-text text-accent-4">Habilidades</h3>
+            <h3 id="list-title" class="blue-text text-accent-4">Habilidades</h3>
             <ul id="list" class="collection" style="border: 0px solid #e0e0e0;">
                 <li class="collection-item avatar" style="opacity: 0">
                     <img src="img/php.png" alt="" class="circle">
@@ -210,9 +210,9 @@
 <script>
     Materialize.fadeInImage($('img'));
     var options = [
-        {selector: '#list', offset: 500, callback: function(el) {
-            Materialize.showStaggeredList($(el));
-            $(el).css("border", "1px solid #e0e0e0");
+        {selector: '#list-title', offset: 100, callback: function(el) {
+            Materialize.showStaggeredList($("#list"));
+            $("#list").css("border", "1px solid #e0e0e0");
         }}
     ];
     Materialize.scrollFire(options);
